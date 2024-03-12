@@ -1,0 +1,82 @@
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #FFFFFF;
+    }
+
+    #profileContainer {
+      margin-top: 60px;
+     
+    }
+
+    #profileImage {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      
+
+    }
+
+    #userInfo {
+      font-weight: bold;
+      color: black;
+      font-family: 'Open Sans', sans-serif;
+      
+      margin-bottom: 40px;
+    }
+
+     .form-container{ 
+            background-color: #FFFFFF;
+            padding: 0;
+            margin: 0;
+            width: 340px;
+            border-radius: 6px;
+            height: 40px;
+            border: 1.5px solid #000000;
+     }
+     
+     .form-container a{
+       color: #000000;
+       text-align: center;
+       text-decoration: none;
+     }
+  </style>
+</head>
+<body>
+
+  <div id="profileContainer">
+    <!-- Display user data from local storage -->
+   
+    <img src="" alt="" id="profileImage">
+    <div id="userInfo"></div>
+    
+  </div>
+<center>
+  <div class="form-container">
+     <a href=""> بماذا تفكر؟</a>
+    
+    </div>
+    
+    
+</center>
+  <script>
+    // Retrieve user data from local storage
+    const storedUsername = localStorage.getItem('username');
+    const storedProfileImage = localStorage.getItem('profileImage');
+
+    // Display user data on the page
+    document.getElementById('profileImage').src = storedProfileImage;
+    document.getElementById('userInfo').innerText = storedUsername;
+  </script>
+
+</body>
+</html>
